@@ -1,0 +1,43 @@
+
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Order Details- Maddy's Caffeine</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="{% static 'images/icon3.png' %}">
+    
+</head>
+<body>
+    
+    <center>
+        <form method="post" action="{% url 'end' %}">
+        {% csrf_token %}
+        
+        <img src="{{ image }}" class="card-img-top" alt="{{ image }}">
+        <div class="summary"> 
+
+            <ul>
+            <div class="detail"><strong>Coffee Name:</strong> {{ name }}</div>
+            <input type="hidden" name="name" value="{{name}}">
+            <div class="detail"><strong>Price :</strong> ${{ price }}</div>
+            <input type="hidden" name="price" value="{{price}}">
+            <div class="detail"><strong>Quantity:</strong> {{ quantity }}</div>
+            <input type="number" name="quantity">
+            <button><strong>Order</strong></button>
+            </ul>
+        </div>
+        
+        </form>
+    </center>
+
+    
+        
+     
+
+    
+    
+    
+    
+</body>
+</html>

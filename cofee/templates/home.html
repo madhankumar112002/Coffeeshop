@@ -1,0 +1,38 @@
+<html>
+<head>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Coffees- Maddy's Caffeine</title>
+    <h1 style="margin-left: 500px; color: darkgreen;"><strong>Maddy's Caffeine☕</strong></h1>
+</head>
+
+<body>
+<div class="row">
+    
+    {% extends "base.html" %}
+
+    {% block content %}
+        {% for cofee in cofee %}
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ cofee.image }}" class="card-img-top" alt="{{ cofee.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ cofee.name }}</h5>
+                        <p class="card-text">{{ cofee.price }}</p>
+                        
+                        
+                        <form method="POST" action="{% url 'order' %}">
+                            {% csrf_token %}
+                            <input type="hidden" name="name" value="{{ cofee.name }}">
+                            <input type="hidden" name="price" value="{{ cofee.price }}">
+                            <input type="hidden" name="image" value="{{ cofee.image}}">
+                            <button class="btn btn-outline-success" type="submit">Order</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        
+    {% endblock %}
+</body>
+</html>

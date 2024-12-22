@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Order Details- Maddy's Caffeine</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="{% static 'images/icon3.png' %}">
+</head>
+<center>
+<body>
+    
+    <h2> This is Your Bill!</h2>
+    {% if name %}
+        <p>Cofee Name: {{ name }}</p>
+        <p>Price: {{ price }}</p>
+        <p>Quantity: {{ quantity }}</p>
+        <p>Total: {{ total }}</p>
+    {% else %}
+        <p>No order data available.</p>
+    {% endif %}
+
+    
+        
+    <nav>
+        
+        <hr>
+        <h1 style="margin-bottom: 50px; color:rgb(223, 147, 6);">Your Order Has Been Successfull !! ☕</h1>
+        <h3 style="color: black;">"Brewed to Perfection, Served with Passion!"
+
+            At [ Maddy's Caffeine], we take pride in every cup we serve. From the rich aroma of freshly ground beans to the smooth, velvety texture of a perfectly brewed espresso, each sip is an experience. Whether you're looking for a morning pick-me-up, a relaxing afternoon treat, or a cozy spot to meet with friends, our wide range of handcrafted coffee beverages has something for everyone.</h4>
+            
+        <h4 style="color: darkgreen;">☕ Freshly Brewed Espresso
+            Bold and robust, our espresso is the heart of every cup, made with premium beans from the finest farms.</h3>
+            
+        <h4 style="color: darkgreen;">🍯 Flavors for Every Palate
+            From classic lattes and cappuccinos to deliciously flavored brews like caramel macchiatos and vanilla lattes, we have something to satisfy every taste.</h4>
+            
+        <h4 style="color: darkgreen;">🌱 Sustainably Sourced
+            We support local farmers and use ethically sourced beans to bring you the highest quality coffee while contributing to a healthier planet.</h4>
+            
+        <h4 style="color: darkgreen;">💡 Your Coffee, Your Way
+            Need a little extra sweetness or a dash of spice? Customize your drink with various milk options, syrups, and toppings to make it just right!</h4>
+        <hr>
+    </nav>
+    
+    <br>
+    
+    <div class="box">
+    <h1 style="padding: 10px; color: black;">Thanks for Visiting Maddy's Caffeine!!</h1>
+    </div>
+</center>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <p><strong>Ordered Coffee:</strong> {{ name }}</p>
+    <p><strong>Price (per item):</strong> {{ price }}</p>
+    <p><strong>Quantity:</strong> {{ quantity }}</p>
+    <p><strong>Total Cost:</strong> {{ total_cost }}</p> -->

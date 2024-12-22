@@ -1,0 +1,19 @@
+body{
+    background: url(https://media.istockphoto.com/id/895609896/vector/womans-hand-with-a-coffee-cup-and-spoon.jpg?s=612x612&w=0&k=20&c=BYQZKopp4JppeVkdHqMGMBsM9zXC61rwvItKotmTeuc=);
+    background-size: 1100px 600px;
+}
+.contact {
+    margin: 0; 
+    position: fixed; 
+    bottom: 100px; 
+    right: 300px; 
+    border: 2px solid #444;
+    padding: 15px; 
+    border-radius: 8px;
+    background-color: seagreen; 
+    color: black;
+    max-width: 400px; 
+    font-size: larger;
+    font-style: italic;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <title>Login- Maddy's Caffeine</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="{% static 'images/icon3.png' %}">
+</head>
+<body>
+    <center>
+            <form method="post" action="{% url 'home' %}">
+                {% csrf_token %}
+                <h3 for="username">Username:</h3>
+                <input type="text" id="username" name="username" required>
+                <i class='bx bxs-user'></i>
+                <br>
+                <h3 for="password">Password:</h3>
+                <input type="password" id="password" name="password" required>
+                <i class='bx bxs-lock'></i>
+                <br>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            
+        </nav>
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+    </center>
+</body>
+</html>
